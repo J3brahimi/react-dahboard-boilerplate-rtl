@@ -19,17 +19,7 @@ export default function AuthPage() {
           component={ForgetPage}
         />
         <Redirect from="/auth" exact={true} to="/auth/login" />
-        {/*redirect from */}
-        <Route
-          render={props => (
-            <Redirect
-              to={{
-                pathname: "/auth/login",
-                from: props.location,
-              }}
-            />
-          )}
-        />
+        <Redirect to="/auth/login" />
       </Switch>
     </div>
     //end::Content body

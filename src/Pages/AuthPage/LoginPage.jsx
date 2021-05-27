@@ -1,4 +1,3 @@
-export default function LoginPage(props) {
-  console.log(props);
+export default function LoginPage() {
   return " login page";
 }
