@@ -1,3 +1,3 @@
 export default function LoginPage() {
-  return " login page";
+  return " تست فونت";
 }

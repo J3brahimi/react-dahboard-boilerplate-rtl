@@ -5,17 +5,26 @@ import reportWebVitals from "./reportWebVitals";
 //Material
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+// make materail rtl
+import { create } from "jss";
+import rtl from "jss-rtl";
+import { StylesProvider, jssPreset } from "@material-ui/core/styles";
 // Styles
 import theme from "Utils/theme";
 import "antd/dist/antd.css";
 import "Assets/scss/styles.scss";
 
+// Configure JSS
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
+
 ReactDOM.render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <StylesProvider jss={jss}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </StylesProvider>
   </StrictMode>,
   document.getElementById("root"),
 );

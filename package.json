@@ -12,6 +12,7 @@
     "antd": "4.13.0",
     "axios": "^0.21.1",
     "history": "^5.0.0",
+    "jss-rtl": "^0.3.0",
     "moment": "^2.29.1",
     "node-sass": "4.14.1",
     "notistack": "^1.0.3",
