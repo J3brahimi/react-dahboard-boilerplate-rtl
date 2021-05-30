@@ -29,8 +29,7 @@ const theme = createMuiTheme({
         body: {
           padding: 0,
           margin: 0,
-          fontFamily:
-            "'Raleway', -apple-system, BlinkMacSystemFont, Roboto, Oxygen Ubuntu, Droid Sans, sans-serif",
+          fontFamily: "'Sahel', sans-serif",
           fontFeatureSettings: "'lnum' 1",
           color: "#0B1D1E",
           backgroundColor: "#FFF",
