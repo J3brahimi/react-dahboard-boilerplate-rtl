@@ -3,6 +3,8 @@ import { createMuiTheme } from "@material-ui/core";
 export const drawerWidth = 260;
 
 const theme = createMuiTheme({
+  // rtl
+  direction: "rtl",
   // for rewrite material-ui theme
   palette: {
     primary: {
