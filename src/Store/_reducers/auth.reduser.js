@@ -39,7 +39,7 @@ export const authReducer = persistReducer(
         };
       case authActionType.LOGOUT_SUCCESS:
         return {
-          ...initialAuthState
+          ...initialAuthState,
         };
 
       case authActionType.REGISTER_REQUEST:

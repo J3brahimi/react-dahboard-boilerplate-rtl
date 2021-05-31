@@ -12,7 +12,7 @@ const api = axios.create({
 const getFromStore = () => {
   const state = store.getState();
   return {
-    token: `Bearer ${state.user.token}`,
+    token: state?.user?.token ? `Bearer ${state.user.token}` : "",
   };
 };
 
