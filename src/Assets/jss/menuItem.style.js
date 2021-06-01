@@ -14,10 +14,13 @@ const menuItemStyle = theme => ({
     width: "auto",
     position: "relative",
     margin: "5px 0",
-    padding: "5px 15px",
+    padding: 0,
     backgroundColor: "transparent",
     borderLeft: `4px solid transparent`,
     ...theme.transitionLinkActive,
+    "& a": {
+      padding: "10px 15px",
+    },
     "& svg": {
       width: 17,
       height: 17,
@@ -30,14 +33,6 @@ const menuItemStyle = theme => ({
       },
     },
   },
-  itemLinkActive: {
-    borderLeft: `4px solid ${theme.color.vividBlue}`,
-    "& svg": {
-      "& path": {
-        fill: theme.color.vividBlue,
-      },
-    },
-  },
   item: {
     display: "flex",
     alignItems: "center",
@@ -47,12 +42,20 @@ const menuItemStyle = theme => ({
   itemText: {
     ...theme.font.s16w700,
     margin: 0,
-    lineHeight: "31px",
+    // lineHeight: "31px",
     color: theme.color.darkGrayishBlue,
     ...theme.transitionLinkActive,
   },
-  itemTextActive: {
-    color: theme.color.vividBlue,
+  itemLinkActive: {
+    borderLeft: `4px solid ${theme.palette.primary.main}`,
+    "& svg": {
+      "& path": {
+        fill: theme.palette.primary.main,
+      },
+    },
+    "& $itemText": {
+      color: theme.palette.primary.main,
+    },
   },
 });
 

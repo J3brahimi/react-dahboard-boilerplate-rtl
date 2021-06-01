@@ -20,11 +20,19 @@ const useStyles = makeStyles(navbarStyle);
 export default function Navbar(props) {
   const classes = useStyles();
 
-  const title = props.routes.map(prop => {
+  const handle_title = prop => {
     if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
       return prop.name;
     }
     return null;
+  };
+
+  const title = props.routes.map(prop => {
+    if (prop.path || typeof prop.path === "string") {
+      return handle_title(prop);
+    } else {
+      return prop.routes.map(pr => handle_title(pr));
+    }
   });
 
   return (

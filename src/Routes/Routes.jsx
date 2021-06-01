@@ -1,7 +1,9 @@
 import { shallowEqual, useSelector } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 import AuthPage from "Pages/AuthPage";
-import PrivateRoutes from "Routes/PrivateRoutes";
+import BasePage from "Routes/BasePage";
+import Layout from "../Layouts";
+import RouteWithSubRoutes from "./RouteWithSubRoutes";
 
 export default function Routes() {
   const { isAuthorized } = useSelector(
@@ -26,7 +28,9 @@ export default function Routes() {
         /*Redirect to `/auth` when user is not authorized*/
         <Redirect to="/auth/login" />
       ) : (
-        <PrivateRoutes />
+        <Layout>
+          <BasePage />
+        </Layout>
       )}
     </Switch>
   );
