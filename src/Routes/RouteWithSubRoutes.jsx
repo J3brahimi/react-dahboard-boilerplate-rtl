@@ -5,18 +5,21 @@ export default function RouteWithSubRoutes({
   children,
   component,
   render,
+  subRoute,
   ...props
 }) {
+  if (subRoute?.length > 0) {
+    return subRoute.map((route, i) => (
+      <RouteWithSubRoutes
+        key={i}
+        path={route.layout + route.path}
+        component={route.component}
+        subRoute={route?.routes}
+      />
+    ));
+  }
+
   return (
-    // <Route
-    //   key={route.path}
-    //   exact={route.exact}
-    //   path={route.layout + route.path}
-    //   render={props => (
-    //     // pass the sub-routes down to keep nesting
-    //     <route.component {...props} routes={route.routes} />
-    //   )}
-    // />
     <Route {...props}>
       {routeProps => {
         if (typeof children === "function") {

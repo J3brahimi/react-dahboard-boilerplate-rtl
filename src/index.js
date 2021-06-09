@@ -11,7 +11,6 @@ import rtl from "jss-rtl";
 import { StylesProvider, jssPreset } from "@material-ui/core/styles";
 // Styles
 import theme from "Utils/theme";
-import "antd/dist/antd.css";
 import "Assets/scss/styles.scss";
 
 // Configure JSS
@@ -26,6 +25,7 @@ ReactDOM.render(
       </ThemeProvider>
     </StylesProvider>
   </StrictMode>,
+
   document.getElementById("root"),
 );
 

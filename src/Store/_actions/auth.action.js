@@ -27,8 +27,14 @@ export const register = user => async dispatch => {
 
 //Login
 const requestLogin = () => ({ type: authActionType.LOGIN_REQUEST });
-const successLogin = user => ({ type: authActionType.LOGIN_SUCCESS, user });
-const failureLogin = error => ({ type: authActionType.LOGIN_FAILURE, error });
+const successLogin = auth => ({
+  type: authActionType.LOGIN_SUCCESS,
+  payload: auth,
+});
+const failureLogin = error => ({
+  type: authActionType.LOGIN_FAILURE,
+  payload: error,
+});
 
 export const login = data => async dispatch => {
   dispatch(requestLogin());
@@ -38,7 +44,7 @@ export const login = data => async dispatch => {
     })
     .catch(err => {
       const error = err.response && (err.response || err.message);
-      dispatch(failureLogin(error.data.message));
+      dispatch(failureLogin());
       throw error;
     });
 };
