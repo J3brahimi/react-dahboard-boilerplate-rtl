@@ -4,8 +4,7 @@ React Dashboard Boilerplate RTL is a free and open source admin dashboard templa
 
 ## Quick start
 
-1. Register and Download from [Themesberg](https://themesberg.com/product/dashboard/volt-react) or clone this repository
-2. Download the project's zip
+
 
 ### Using Yarn
 
