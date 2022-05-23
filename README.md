@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# React Dashboard Boilerplate RTL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Dashboard Boilerplate RTL is a free and open source admin dashboard template built in React.js and based on the Material-UI design system.
 
-## Available Scripts
+## Quick start
 
-In the project directory, you can run:
+1. Register and Download from [Themesberg](https://themesberg.com/product/dashboard/volt-react) or clone this repository
+2. Download the project's zip
 
-### `yarn start`
+### Using Yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Make sure you have [Yarn](https://yarnpkg.com/) installed.
+4. After installing `yarn`, open a terminal and run `yarn install` in the main volt folder to download all project dependencies.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+yarn install
+```
 
-### `yarn test`
+5. Then start the app in development mode by running the following command in terminal:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn start
+```
 
-### `yarn build`
+6. Open http://localhost:3000 to view it in the browser. Any changes you make to the code will be automatically reflected in the browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. If you want to generate the production files, change the `homepage` value from the `package.json` to the domain name that the app will be hosted on, and then run the following command in the terminal:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+yarn build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Using NPM
 
-### `yarn eject`
+3. Make sure you have [Node.js](https://nodejs.org/en/) installed. Make sure the installed Node version is >= 8.10 and of npm >= 5.6
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. After installing Node.js, open a terminal and run `npm install` in the main `volt-react-dashboard/` folder to download all project dependencies. You'll find them in the `node_modules/` folder.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Then start the app in development mode by running the following command in terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm run start
+```
 
-## Learn More
+6. Open http://localhost:3000 to view it in the browser. Any changes you make to the code will be automatically reflected in the browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. If you want to generate the production files, change the `homepage` value from the `package.json` to the domain name that the app will be hosted on, and then run the following command in the terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm run build
+```
